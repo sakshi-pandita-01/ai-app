@@ -2,6 +2,8 @@ import "./App.css";
 
 import { useEffect, useState } from "react";
 
+import { Button } from "./components/ui/button";
+
 function App() {
   const [message, setMessage] = useState("");
 
@@ -14,9 +16,10 @@ function App() {
   }, []);
 
   return (
-    <>
-      <p>{message}</p>
-    </>
+    <div className="p-4">
+      <p className="font-bold text-3xl">{message}</p>
+      <Button variant="outline">click me</Button>
+    </div>
   );
 }
 
